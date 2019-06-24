@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { HOME, PRODUCT_PAGE, TOPICS } from '../Constants/RouteConstants'
+import { HOME, ADD_PRODUCT } from '../Constants/RouteConstants'
 
 export default function NavBar() {
   return (
@@ -9,10 +9,7 @@ export default function NavBar() {
         <Link to={HOME}>Home</Link>
       </li>
       <li>
-        <Link to={PRODUCT_PAGE}>ProductPage</Link>
-      </li>
-      <li>
-        <Link to={TOPICS}>Topics</Link>
+        <Link to={ADD_PRODUCT}>Add New Product</Link>
       </li>
     </ul>
   )

@@ -1,17 +1,33 @@
 import React from 'react'
 import StoreContext from './StoreContext'
-import { GET_ALL_PRODUCTS } from '../Constants/ActionConstants'
-import { JSON_Data } from './initialState'
+import { GET_ALL_PRODUCTS, ADD_NEW_PRODUCT } from '../Constants/ActionConstants'
+import BANDERSNATCH from '../Images/game-bandersnatch-canned.gif'
+import NOHZDYVE from '../Images/game-nohzdyve.gif'
 
 const initialState = {
-  length: JSON_Data.length,
-  catalogue: JSON_Data
+  catalogue: [
+    {
+      name: 'BANDERSNATCH',
+      price: 0,
+      image: BANDERSNATCH,
+      description:
+        'A morbid turn of events would lead to the company shuttering its doors before the anticipated release of Bandersnatch, an ambitious title in development by the now infamous Stefan Butler.'
+    },
+    {
+      name: 'Nohzdyve',
+      price: 19.99,
+      image: NOHZDYVE,
+      description: `You're falling fast through the sky! Collect eyeballs and avoid the buildings and other hazards. Perfection is key. This was truly a five star game by none other than Colin Ritman.`
+    }
+  ]
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
     case GET_ALL_PRODUCTS:
       return state
+    case ADD_NEW_PRODUCT:
+      return Object.assign({}, state, state.catalogue.push(action.product))
     default:
       return state
   }
