@@ -1,8 +1,8 @@
 import React from 'react'
 import StoreContext from './StoreContext'
 import { GET_ALL_PRODUCTS, ADD_NEW_PRODUCT } from '../Constants/ActionConstants'
-import BANDERSNATCH from '../Images/game-bandersnatch-canned.gif'
-import NOHZDYVE from '../Images/game-nohzdyve.gif'
+import BANDERSNATCH from '../Images/bandersnatch.gif'
+import NOHZDYVE from '../Images/nohzdyve.gif'
 
 const initialState = {
   catalogue: [

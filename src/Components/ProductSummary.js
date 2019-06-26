@@ -2,10 +2,11 @@ import React from 'react'
 
 const ProductSummary = ({ product }) => {
   return (
-    <div>
+    <li key={product.id}>
+      <p>{product.id}</p>
       <p>{product.name}</p>
       <p>{product.balance}</p>
-    </div>
+    </li>
   )
 }
 
