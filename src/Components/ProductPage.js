@@ -1,7 +1,8 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import { StoreContext } from '../Store/StoreContext'
+import { StoreContext } from '../Contexts/StoreContext'
 import { PRODUCT_PAGE } from '../Constants/RouteConstants'
+import AddToCart from '../Components/AddToCart'
 
 export function ProductPage({ match, history }) {
   const { state } = React.useContext(StoreContext)
@@ -41,6 +42,7 @@ export function ProductPage({ match, history }) {
       <p>{product.id}</p>
       <p>{product.name}</p>
       <p>£{product.price}</p>
+      <AddToCart product={product} />
       <img src={product.image} alt='the game' />
       <p>{product.description}</p>
     </div>

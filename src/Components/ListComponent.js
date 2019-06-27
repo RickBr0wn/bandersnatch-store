@@ -3,7 +3,7 @@ import { Link, withRouter, Route } from 'react-router-dom'
 import { PRODUCT_PAGE } from '../Constants/RouteConstants'
 import ProductDetail from './ProductDetail'
 import ProductPage from './ProductPage'
-import { StoreContext } from '../Store/StoreContext'
+import { StoreContext } from '../Contexts/StoreContext'
 
 const ListComponent = ({ match }) => {
   const { state } = React.useContext(StoreContext)
