@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  GET_ALL_PRODUCTS,
-  ADD_NEW_PRODUCT,
-  DISPLAY_NEXT_IN_CATALOGUE
-} from '../Constants/ActionConstants'
+import { GET_ALL_PRODUCTS, ADD_NEW_PRODUCT } from '../Constants/ActionConstants'
 import BANDERSNATCH from '../Images/bandersnatch.gif'
 import NOHZDYVE from '../Images/nohzdyve.gif'
 import METLHEDD from '../Images/metlhedd.gif'
@@ -83,9 +79,6 @@ const reducer = (state, action) => {
       return state
     case ADD_NEW_PRODUCT:
       return Object.assign({}, state, state.catalogue.push(action.product))
-    case DISPLAY_NEXT_IN_CATALOGUE:
-      const id = action.id
-      return state
     default:
       throw new Error('Please use a valid action with a type property.')
   }
