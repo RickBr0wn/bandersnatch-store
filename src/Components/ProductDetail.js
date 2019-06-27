@@ -1,13 +1,11 @@
 import React from 'react'
 
-const ProductSummary = ({ product }) => {
+export default function ProductDetail({ product }) {
   return (
-    <li key={product.id}>
+    <li>
       <p>{product.id}</p>
       <p>{product.name}</p>
       <p>{product.balance}</p>
     </li>
   )
 }
-
-export default ProductSummary

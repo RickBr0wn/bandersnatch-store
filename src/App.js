@@ -1,14 +1,11 @@
 // TuckerSoft&#8482;
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { Home, ProductPage, NavBar, Topics, AddProduct } from './Components'
+import Home from './Components/Home'
+import ProductPage from './Components/ProductPage'
+import NavBar from './Components/NavBar'
 import StoreContextProvider from './Store/StoreContext'
-import {
-  HOME,
-  PRODUCT_PAGE,
-  TOPICS,
-  ADD_PRODUCT
-} from './Constants/RouteConstants'
+import { HOME, PRODUCT_PAGE } from './Constants/RouteConstants'
 
 function App() {
   return (
@@ -17,8 +14,6 @@ function App() {
         <NavBar />
         <Route exact path={HOME} component={Home} />
         <Route path={`${PRODUCT_PAGE}/:id`} component={ProductPage} />
-        <Route path={TOPICS} component={Topics} />
-        <Route path={ADD_PRODUCT} component={AddProduct} />
       </StoreContextProvider>
     </Router>
   )
