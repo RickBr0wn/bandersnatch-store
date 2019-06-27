@@ -8,7 +8,7 @@ import { StoreContext } from '../Store/StoreContext'
 const ListComponent = ({ match }) => {
   const { state } = React.useContext(StoreContext)
   return (
-    <ul>
+    <>
       {state.catalogue.map((product, index) => {
         return (
           <div key={product.id}>
@@ -19,7 +19,7 @@ const ListComponent = ({ match }) => {
           </div>
         )
       })}
-    </ul>
+    </>
   )
 }
 
