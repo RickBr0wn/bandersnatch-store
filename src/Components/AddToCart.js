@@ -1,6 +1,7 @@
 import React from 'react'
 import { CheckoutContext } from '../Contexts/CheckoutContext'
 import { ADD_ITEM_TO_BASKET } from '../Constants/ActionConstants'
+import { Button } from 'semantic-ui-react'
 
 export default function AddToCart({ product }) {
   const { dispatch } = React.useContext(CheckoutContext)
@@ -11,8 +12,10 @@ export default function AddToCart({ product }) {
     quantity: 1
   }
   return (
-    <button onClick={() => dispatch({ type: ADD_ITEM_TO_BASKET, newItem })}>
-      BUY NOW
-    </button>
+    <Button
+      color='red'
+      onClick={() => dispatch({ type: ADD_ITEM_TO_BASKET, newItem })}>
+      {'I want this!'.toUpperCase()}
+    </Button>
   )
 }

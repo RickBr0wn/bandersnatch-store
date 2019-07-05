@@ -14,10 +14,11 @@ function App() {
     <Router>
       <StoreContextProvider>
         <CheckoutContextProvider>
-          <NavBar />
-          <Route exact path={HOME} component={Home} />
-          <Route path={`${PRODUCT_PAGE}/:id`} component={ProductPage} />
-          <Route path={BASKET} component={BasketPage} />
+          <NavBar>
+            <Route exact path={HOME} component={Home} />
+            <Route path={`${PRODUCT_PAGE}/:id`} component={ProductPage} />
+            <Route path={BASKET} component={BasketPage} />
+          </NavBar>
         </CheckoutContextProvider>
       </StoreContextProvider>
     </Router>
